@@ -1,0 +1,12 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.span-content {
+  display: flex;
+  min-width: 99vw;
+  min-height: 99vh;
+  border: solid;
+}

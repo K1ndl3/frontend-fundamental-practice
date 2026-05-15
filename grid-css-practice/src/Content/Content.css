@@ -1,0 +1,6 @@
+.content-container {
+  min-height: 100vh;
+  min-width: 85vw;
+  border: solid;
+  margin: 5px;
+}
