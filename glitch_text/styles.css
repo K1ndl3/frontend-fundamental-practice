@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  background-color: rgb(22, 20, 20);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100vw;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.glitch {
+  font-size: 6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: white;
+  position:relative;  
+
+  text-shadow:
+    0.05em 0 0 rgb(85, 44, 232),
+    -0.025em -0.05em 0 rgb(241, 92, 51),
+    0.025em 0.05em 0 rgb(47, 254, 112);
+
+    animation: glitch 750ms infinite;
+}
+
+.glitch span {
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.glitch span:first-child {
+    animation: glitch 550ms infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 40%, 0 40%);
+    transform: translate(-.05em, -.025em);
+    opacity: .7;
+}
+
+.glitch span:last-child {
+    animation: glitch 350ms infinite;
+    clip-path: polygon(0 60%, 100% 60%, 100% 100%, 0 100%);
+    transform: translate(.05em, .025em);
+    opacity: .5;
+}
+
+@keyframes glitch {
+
+    0% {
+        text-shadow:
+    0.05em 0 0 rgb(85, 44, 232),
+    -0.025em -0.05em 0 rgb(241, 92, 51),
+    0.025em 0.05em 0 rgb(47, 254, 112);
+    }
+    14% {
+        text-shadow:
+    0.05em 0 0 rgb(85, 44, 232),
+    -0.025em -0.05em 0 rgb(241, 92, 51),
+    0.025em 0.05em 0 rgb(47, 254, 112);
+    }
+    15% {
+        text-shadow:
+    -0.05em 0 0 rgb(85, 44, 232),
+    0.025em -0.05em 0 rgb(241, 92, 51),
+    -0.025em 0.05em 0 rgb(47, 254, 112);
+        
+    }
+
+    49% {
+        text-shadow:
+    -0.05em 0 0 rgb(85, 44, 232),
+    0.025em -0.05em 0 rgb(241, 92, 51),
+    -0.025em 0.05em 0 rgb(47, 254, 112);
+        
+    }
+
+    50% {
+        text-shadow:
+    0.06em 0 0 rgb(85, 44, 232),
+    -0.013em -0.09em 0 rgb(241, 92, 51),
+    0.013em 0.03em 0 rgb(47, 254, 112);
+    }
+
+    99% {
+        text-shadow:
+    0.06em 0 0 rgb(85, 44, 232),
+    -0.013em -0.09em 0 rgb(241, 92, 51),
+    0.013em 0.03em 0 rgb(47, 254, 112);
+    }
+
+    100% {
+        text-shadow:
+    -0.02em 0 0 rgb(85, 44, 232),
+    0.013em 0.10em 0 rgb(241, 92, 51),
+    -0.025em 0.05em 0 rgb(47, 254, 112);
+    }
+}
